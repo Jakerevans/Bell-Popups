@@ -1,0 +1,246 @@
+
+/*
+ *   BEGIN COLOR VARIABLES
+*/
+$primary-color: #B4D9E9;
+$primary-color-border: #b11c48;
+$verylight-primary-color: #FAE6EC;
+$slightly-darker-primary: #F8DEE6;
+$slightly-darker-primary-border: #DFC7CF;
+$secondary-yellow: #F8C849;
+$purewhite: #FFFFFF;
+$pureblack: #000000;
+$lightgray: #CCCCCC;
+$white-trans-9:rgba(255, 255, 255, 0.9);
+$primary-box-shadow:2px 2px 5px $pureblack;
+$primary-box-shadow-inset: inset 2px 2px 5px $pureblack;
+$menu-text-shadow: 1px 1px black;
+$input-border-gainsboro: #DDDDDD;
+
+/*
+ *   END COLOR VARIABLES
+*/
+
+/*
+ * BEGIN PLACEHOLDER CLASSES
+ */
+%bellpopup-admin-container-border{
+    border: solid 1px $primary-color;
+}
+
+%bellpopup-admin-container-box-shadow{
+    box-shadow: 10px 10px 10px $primary-color;
+}
+
+%bellpopup-margin-auto-centered{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+%bellpopup-question-icon-label{
+    position:relative;
+    right:10px;
+}
+
+%bellpopup-response-success-fail-container{
+    text-align:center;
+    margin-top:50px;
+}
+
+%bellpopup-admin-top-title-icon{
+    width: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+%bellpopup-admin-container-bottom-border-only{
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 1px;
+    border-style: solid;
+}
+
+%bellpopup-admin-advert-visit-me-title{
+    font-variant: small-caps;
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 5px;
+    margin-top:20px;
+}
+
+%bellpopup-admin-advert-site-div{
+    text-align: center;
+    font-variant: small-caps;
+    display: inline-block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+%bellpopup-icon-image-question{
+    width: 12px;
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 10px;
+    position: relative;
+    right: 10px;
+}
+
+%bellpopup-spinner{
+    opacity: 0;
+    height: 20px;
+    width: 20px;
+    margin: 10px auto;
+    -webkit-animation: rotation .6s infinite linear;
+    -moz-animation: rotation .6s infinite linear;
+    -o-animation: rotation .6s infinite linear;
+    animation: rotation .6s infinite linear;
+    border-left: 1px solid $purewhite;
+    border-right: 1px solid $purewhite;
+    border-bottom: 1px solid $purewhite;
+    border-top: 1px solid $primary-color;
+    border-radius: 100%;
+    position: relative;
+}
+
+%bellpopup-tab-intro-para{
+    @extend %bellpopup-margin-auto-centered;
+    text-align: center;
+    max-width: 600px;
+}
+
+%bellpopup-admin-containers{
+    @extend %bellpopup-admin-container-border;
+    @extend %bellpopup-admin-container-box-shadow;
+    background-color: $purewhite;
+    padding: 10px;
+    width: 70%;
+    border-radius: 10px;
+    margin: 25px;
+}
+
+%bellpopup-admin-top-title{
+    @extend %bellpopup-admin-container-bottom-border-only;
+    width: 100%;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 18px;
+    text-align: center;
+}
+
+%bellpopup-addition-div-img{
+    width:22px;
+}
+
+%bellpopup-addition-div-p{
+    margin: 0px;
+    font-size: 10px;
+    position: relative;
+    top: 42px;
+    line-height: 0.9;
+}
+
+%bellpopup-bold-shortcode{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+%bellpopup-bold-shortcode-orange{
+    @extend %bellpopup-bold-shortcode;
+    color: $primary-color;
+}
+
+%bellpopup-bold-li-heading{
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom:5px;
+}
+
+%bellpopup-indiv-entry-style {
+    border: 1px solid #e5e5e5;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: block;
+    position: relative;
+    min-height: 100px;
+    width: 97%;
+}
+
+%bellpopup-indiv-row-container-div{
+    margin-bottom: 20px;
+    border: 1px solid #e5e5e5;
+    padding: 10px;
+    display: block;
+    position: relative;
+    min-height: 50px;
+    width: 97%;
+}
+
+%bellpopup-default-buttons-style{
+    box-shadow: inset 0 -3px 0 rgba(0,0,0,.1);
+    margin: 5px;
+    background-color: $primary-color;
+    padding: 7px;
+    padding-left: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    display:inline-block;
+}
+
+%bellpopup-default-buttons-style-hover{
+    box-shadow: none;
+}
+
+%bellpopup-select-centered{
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
+
+%bellpopup-response-success-fail-button{
+    margin: 50px;
+    margin-top: 20px;
+}
+
+
+ %bellpopup-color-orange-italic{
+    color: $primary-color;
+    font-style: italic;
+ }
+
+ %bellpopup-button-and-link-box-shadow{
+    box-shadow: inset 0 -3px 0 rgba(0,0,0,0.1);
+ }
+
+%bellpopup-smile-icon{
+    @extend %bellpopup-margin-auto-centered;
+    width: 30px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+/*
+ * END PLACEHOLDER CLASSES
+ */
+
+/*
+ *  BEGIN IMPORTS
+*/
+
+@import '_bellpopup-admin-ui.scss';
+@import '_bellpopup-admin-select2.scss';
+
+/*
+ *  END IMPORTS
+*/

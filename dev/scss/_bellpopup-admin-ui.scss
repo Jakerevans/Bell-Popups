@@ -1,0 +1,289 @@
+/**
+ * SCSS - _bellpopupplugin-admin-ui.scss - Holds general Admin CSS that applies plugin-wide, including CSS for the Admin containers, the advertisment areas, and the dashboard icon
+ *
+ * @author   Jake Evans
+ * @category SCSS
+ * @package  Includes/Assets/CSS
+ * @version  6.0.0
+ */
+
+
+/*
+ * BEGIN ADMIN CONTAINER BONES, ADVERTISMENT, LICENSE UI ELEMENTS, AND DASHBOARD ICON CSS
+ */
+.bellpopupplugin-admin-top-container, .bellpopupplugin-admin-advert-container{
+    @extend %bellpopup-admin-containers;
+}
+
+.bellpopupplugin-admin-top-title-icon{
+    @extend %bellpopup-admin-top-title-icon;
+}
+
+.bellpopupplugin-admin-top-title{
+    @extend %bellpopup-admin-top-title;
+}
+
+.bellpopupplugin-admin-advert-visit-me-title{
+    @extend %bellpopup-admin-advert-visit-me-title;
+}
+
+.bellpopupplugin-admin-advert-site-div{
+    @extend %bellpopup-admin-advert-site-div;
+}
+
+.bellpopupplugin-admin-advert-site-div img{
+    @extend %bellpopup-margin-auto-centered;
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#bellpopupplugin-admin-advert-email-me{
+    @extend %bellpopup-margin-auto-centered;
+    text-align: center;
+    width: 70%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#bellpopupplugin-admin-advert-flex-container{
+    display:flex;
+}
+
+#bellpopupplugin-facebook-link-div, #bellpopupplugin-admin-advert-money-container{
+    text-align:center;
+}
+
+#bellpopupplugin-admin-advert-money-container form{
+    display: inline-block;
+}
+
+#bellpopupplugin-patreon-img{
+    width: 100px;
+}
+
+#bellpopupplugin-patreon-link{
+    display: inline-block;
+    margin: 10px;
+}
+
+.bellpopupplugin-admin-advert-visit-me-link{
+    text-decoration:none;
+    font-size: 20px;
+    margin-bottom: 30px;
+    display: block;
+}
+
+.bellpopup_page_BellPopup-Options .dashicons-before img {
+    width: 30px !important;
+    margin-right: 2px !important;
+    margin-left: 2px !important;
+}
+
+.bellpopupplugin-my-notice-dismiss-forever{
+    @extend %bellpopup-default-buttons-style;
+}
+
+.bellpopupplugin-my-notice-dismiss-forever:hover {
+    @extend %bellpopup-default-buttons-style-hover;
+}
+
+.bellpopupplugin-extension-genreric-key-plugins-page-input{
+    margin-right:5px;
+}
+
+.bellpopupplugin-extension-genreric-key-dashboard-input{
+    min-width:300px;
+}
+
+.bellpopupplugin-extension-genreric-key-dashboard-form{
+    padding-bottom:10px;
+}
+
+/*
+ * BEGIN ADMIN CONTAINER BONES, ADVERTISMENT, LICENSE UI ELEMENTS, AND DASHBOARD ICON CSS
+ */
+
+
+/*
+ * BEGIN COMMON ELEMENTS INSIDE OF TOP ADMIN CONTAINERS
+ */
+
+ .bellpopupplugin-color-orange-italic{
+    @extend  %bellpopup-color-orange-italic;
+ }
+
+.bellpopupplugin-tab-intro-para{
+    @extend %bellpopup-tab-intro-para;
+}
+
+.bellpopupplugin-tab-intro-para-left{
+    @extend %bellpopup-tab-intro-para;
+    text-align: left;
+}
+
+.bellpopupplugin-icon-image-question, .bellpopupplugin-icon-image-question-with-link{
+   @extend %bellpopup-icon-image-question;
+}
+
+.bellpopupplugin-icon-image-question-with-link{
+    right: 3px;
+}
+
+.bellpopupplugin-spinner{
+    @extend %bellpopup-spinner;
+}
+
+.bellpopupplugin-response-success-fail-container{
+    @extend %bellpopup-response-success-fail-container;
+}
+
+.bellpopupplugin-question-icon-label{
+    @extend %bellpopup-question-icon-label;
+}
+
+.bellpopupplugin-addition-div-img{
+    width:22px;
+}
+
+.bellpopupplugin-addition-div-img{
+   @extend %bellpopup-addition-div-img;
+}
+
+.bellpopupplugin-addition-div-p{
+    @extend %bellpopup-addition-div-p;
+}
+
+#bellpopupplugin-smile-icon-1{
+    @extend %bellpopup-margin-auto-centered;
+    @extend %bellpopup-smile-icon;
+}
+
+#bellpopupplugin-success-span{
+    font-style: italic;
+    color: $primary-color;
+    font-size: 16px;
+}
+
+.bellpopupplugin-show-book-colorbox {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.bellpopupplugin-bold-shortcode{
+    @extend %bellpopup-bold-shortcode;
+}
+
+.bellpopupplugin-bold-shortcode-orange{
+    @extend %bellpopup-bold-shortcode-orange;
+}
+
+.bellpopupplugin-bold-li-heading{
+   @extend %bellpopup-bold-li-heading;
+}
+
+#bellpopupplugin-dynamic-input-library{
+    min-width: 300px;
+    margin-bottom:50px;
+}
+
+#bellpopupplugin-dynamic-shortcode-button{
+    margin-bottom:50px;
+}
+
+#bellpopupplugin-dynamic-shortcode-button, .bellpopup_delete_custom_lib{
+    width: 200px;
+}
+
+.bellpopupplugin-response-success-fail-button{
+   @extend %bellpopup-response-success-fail-button;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#bellpopupplugin-cache-clear-wrapper{
+    width: 70%;
+    margin: 25px;
+    margin-top: 0px;
+    position: relative;
+    text-align: center;
+    top: 5px;
+}
+
+
+#bellpopupplugin-cache-clear-wrapper img{
+    left: 0px;
+    top: 1px;
+}
+
+#bellpopupplugin-spinner-cache{
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    top: 10px;
+    border-left: 1px solid #F1F1F1;
+    border-right: 1px solid #F1F1F1;
+    border-bottom: 1px solid #F1F1F1;
+}
+
+
+
+/*
+ * END COMMON ELEMENTS INSIDE OF TOP ADMIN CONTAINERS
+ */
+
+
+
+/*
+ * 
+ */
+
+#bellpopupplugin-display-options-container{
+    text-align: center;
+}
+
+.bellpopupplugin-form-section-fields-wrapper{
+    display: flex;
+    margin: 10px;
+}
+
+.bellpopupplugin-form-section-fields-label{
+    display: block;
+}
+
+.bellpopupplugin-form-section-fields-indiv-wrapper{
+    flex: 1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.bellpopupplugin-form-section-fields-indiv-wrapper input {
+    width:13vw;
+}
+
+.toplevel_page_BellPopUp-Options .dashicons-before img{
+    width: 30px !important;
+    margin-right: 2px !important;
+    padding: 2px 0 0 !important;
+    top: 6px;
+    position: relative;
+}
+
+@media screen and ( max-width: 960px ){
+
+    .bellpopupplugin-form-section-fields-wrapper{
+        flex-direction: column;
+    }
+
+    .bellpopupplugin-form-section-fields-indiv-wrapper input {
+        width:40vw;
+    }
+
+}
+
+
+ /*
+ * END CSS FOR COMMON FORM FILL
+ */

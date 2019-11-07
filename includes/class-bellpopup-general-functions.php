@@ -109,6 +109,15 @@ if ( ! class_exists( 'BellPopUp_General_Functions', false ) ) :
 			$final_array_of_php_values['SETTINGS_PAGE_URL'] = menu_page_url( 'WPBookList-Options-settings', false );
 			$final_array_of_php_values['DB_PREFIX'] = $wpdb->prefix;
 
+			// Now grab all of our Nonces to pass to the JavaScript for the Ajax functions and merge with the Translations array.
+			$final_array_of_php_values = array_merge( $final_array_of_php_values, json_decode( BELLPLUGINTOPLEVEL_FINAL_NONCES_ARRAY, true ) );
+
+			// Now grab all of the saved popups.
+			$popups = $wpdb->get_results( 'SELECT * FROM ' . $wpdb->prefix . 'bellpopup_popups' );
+
+	
+			$final_array_of_php_values['popups'] = $popups;
+
 
 			// Now registering/localizing our JavaScript file, passing all the PHP variables we'll need in our $final_array_of_php_values array, to be accessed from 'wpbooklist_php_variables' object (like wpbooklist_php_variables.nameofkey, like any other JavaScript object).
 			wp_localize_script( 'bellpopup_adminjs', 'bellPopupPhpVariables', $final_array_of_php_values );
@@ -123,6 +132,15 @@ if ( ! class_exists( 'BellPopUp_General_Functions', false ) ) :
 		public function bellpopup_frontend_js() {
 
 			wp_register_script( 'bellpopup_frontendjs', BELLPOPUP_JS_URL . 'bellpopup_frontend.min.js', array( 'jquery' ), BELLPOPUP_VERSION_NUM, true );
+
+			$final_array_of_php_values = array();
+
+			// Now grab all of our Nonces to pass to the JavaScript for the Ajax functions and merge with the Translations array.
+			$final_array_of_php_values = array_merge( $final_array_of_php_values, json_decode( BELLPLUGINTOPLEVEL_FINAL_NONCES_ARRAY, true ) );
+
+			// Now registering/localizing our JavaScript file, passing all the PHP variables we'll need in our $final_array_of_php_values array, to be accessed from 'wpbooklist_php_variables' object (like wpbooklist_php_variables.nameofkey, like any other JavaScript object).
+			wp_localize_script( 'bellpopup_adminjs', 'bellPopupPhpVariables', $final_array_of_php_values );
+
 			wp_enqueue_script( 'bellpopup_frontendjs' );
 
 		}

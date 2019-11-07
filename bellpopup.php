@@ -143,6 +143,7 @@ global $wpdb;
 	define( 'BELLPOPUP_NONCES_ARRAY',
 		wp_json_encode(array(
 			'adminnonce1' => 'bellpopup_save_license_key_action_callback',
+			'adminnonce2' => 'bellpopup_save_new_popup_action_callback',
 		))
 	);
 
@@ -211,6 +212,9 @@ global $wpdb;
 /* END OF FUNCTIONS FOUND IN CLASS-WPPLUGIN-GENERAL-FUNCTIONS.PHP THAT APPLY PLUGIN-WIDE */
 
 /* FUNCTIONS FOUND IN CLASS-WPPLUGIN-AJAX-FUNCTIONS.PHP THAT APPLY PLUGIN-WIDE */
+
+	// Function to add table names to the global $wpdb.
+	add_action( 'wp_ajax_bellpopup_save_new_popup_action', array( $bellpopup_ajax_functions, 'bellpopup_save_new_popup_action_callback' ) );
 
 
 /* END OF FUNCTIONS FOUND IN CLASS-WPPLUGIN-AJAX-FUNCTIONS.PHP THAT APPLY PLUGIN-WIDE */

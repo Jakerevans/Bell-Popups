@@ -26,8 +26,93 @@ if ( ! class_exists( 'BellPopUp_Ajax_Functions', false ) ) :
 
 		}
 
+
+
+
+		// Callback function for creating backups.
+		function bellpopup_save_new_popup_action_callback() {
+			global $wpdb;
+			check_ajax_referer( 'bellpopup_save_new_popup_action_callback', 'security' );
+
+			if ( isset( $_POST['popupname'] ) ) {
+				$popupname = filter_var( $_POST['popupname'], FILTER_SANITIZE_STRING );
+			}
+
+			if ( isset( $_POST['popupdescription'] ) ) {
+				$popupdescription = filter_var( $_POST['popupdescription'], FILTER_SANITIZE_STRING );
+			}
+
+			if ( isset( $_POST['popuptextblurb'] ) ) {
+				$popuptextblurb = filter_var( $_POST['popuptextblurb'], FILTER_SANITIZE_STRING );
+			}
+
+			if ( isset( $_POST['popuplink'] ) ) {
+				$popuplink = filter_var( $_POST['popuplink'], FILTER_SANITIZE_STRING );
+			}
+
+			if ( isset( $_POST['popupvideo'] ) ) {
+				$popupvideo = filter_var( $_POST['popupvideo'], FILTER_SANITIZE_STRING );
+			}
+
+			if ( isset( $_POST['popuptrafficsource'] ) ) {
+				$popuptrafficsource = filter_var( $_POST['popuptrafficsource'], FILTER_SANITIZE_STRING );
+			}
+
+			if ( isset( $_POST['popuptriggerwhen'] ) ) {
+				$popuptriggerwhen = filter_var( $_POST['popuptriggerwhen'], FILTER_SANITIZE_STRING );
+			}
+
+			if ( isset( $_POST['popuptriggerwhere'] ) ) {
+				$popuptriggerwhere = filter_var( $_POST['popuptriggerwhere'], FILTER_SANITIZE_STRING );
+			}
+
+			$data = array(
+				'popupname' => $popupname,
+				'popupdescription' => $popupdescription,
+				'popuptextblurb' => $popuptextblurb,
+				'popuplink' => $popuplink,
+				'popupvideo' => $popupvideo,
+				'popuptrafficsource' => $popuptrafficsource,
+				'popuptriggerwhen' => $popuptriggerwhen,
+				'popuptriggerwhere' => $popuptriggerwhere,
+			);
+
+			$table  = $wpdb->prefix."bellpopup_popups";
+			$format = array( '%s','%s','%s','%s','%s','%s','%s','%s',); 
+
+			$wpdb->insert( $table, $data, $format );
+
+			$result = $wpdb->update( $table, $data, $where, $format, $where_format );
+
+		
+
+
+
+/*
+			if ( isset( $_POST['firstname'] ) ) {
+				$firstname = filter_var( $_POST['firstname'], FILTER_SANITIZE_STRING );
+			}
+
+			$data = array(
+				'defaultsaleprice' => $saleprice,
+			);
+
+			
+*/
+			wp_die('$result');
+		}
+
+
+
+
+
 	}
 endif;
+
+
+
+
+
 
 /*
 

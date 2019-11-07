@@ -68,7 +68,7 @@ if ( ! class_exists( 'BellPopup_Settings1_Form', false ) ) :
 					<div class="bellpopupplugin-form-section-fields-wrapper">
 						<div class="bellpopupplugin-form-section-fields-indiv-wrapper">
 							<label class="bellpopupplugin-form-section-fields-label">Popup Video</label>
-							<input class="bellpopup-form-section-fields-input bellpopup-form-section-fields-input-text" id="bellpopup-input-rewardimage" type="text" value="">
+							<input class="bellpopup-form-section-fields-input bellpopup-form-section-fields-input-text" id="bellpopup-input-popupvideo" type="text" value="">
 								<button class="bellpopup-form-section-fields-input bellpopup-form-section-fields-input-button bellpopup-form-section-fields-input-file-upload-button" id="bellpopupplugin-form-popupvideo" data-dbtype="%s" data-dbname="popupvideo">Choose File</button>
 						</div>
 						<div class="bellpopupplugin-form-section-fields-indiv-wrapper">
@@ -90,22 +90,9 @@ if ( ! class_exists( 'BellPopup_Settings1_Form', false ) ) :
 							</select>
 						</div>
 					</div>
-					<div class="bellpopupplugin-form-section-fields-wrapper">
-						<div class="bellpopupplugin-form-section-fields-indiv-wrapper">
-							<label class="bellpopupplugin-form-section-fields-label">State</label>
-							<select class="bellpopupplugin-form-section-fields-input bellpopupplugin-form-section-fields-input-select" id="bellpopupplugin-form-contactstate" data-dbname="contactstate">
-								<option selected default disabled>Select A State...</option>
-								<option value="AL">Alabama</option>
-							</select>
-						</div>
-						<div class="bellpopupplugin-form-section-fields-indiv-wrapper">
-							<label class="bellpopupplugin-form-section-fields-label">Zip</label>
-							<input class="bellpopupplugin-form-section-fields-input bellpopupplugin-form-section-fields-input-text" id="bellpopupplugin-form-contactzip" data-dbname="contactzip" type="text" value="" />
-						</div>
+					<div>
+						<button id="bellpopupplugin-save-popup-button">Save Popup</button>
 					</div>
-
-
-
 				</div>';
 
 			$string1 = '
